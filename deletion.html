@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Element from Array</title>
+</head>
+<body>
+    <h1>Delete Element from Array</h1>
+
+    <p>Original Array: [5, 1, 4, 2, 8]</p>
+
+    <button onclick="deleteElement()">Delete Element</button>
+
+    <p>Updated Array: <span id="updatedArray"></span></p>
+
+    <script>
+        let array = [5, 1, 4, 2, 8];
+
+        function deleteElement() {
+            const indexToDelete = 2; // Replace with the index you want to delete
+
+            if (indexToDelete >= 0 && indexToDelete < array.length) {
+                array.splice(indexToDelete, 1);
+                document.getElementById("updatedArray").innerText = '[' + array.join(', ') + ']';
+            } else {
+                alert('Invalid index. Please provide a valid index for deletion.');
+            }
+        }
+    </script>
+</body>
+</html>
